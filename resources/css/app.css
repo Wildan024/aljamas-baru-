@@ -1,0 +1,29 @@
+/* Google Fonts – Poppins & Inter (harus di atas sebelum @import tailwindcss) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    /* Typography */
+    --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+    --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+    /* Design Tokens – sesuai DESIGN.md */
+    --color-primary:        #238B45;
+    --color-primary-hover:  #1E7A3B;
+    --color-primary-light:  #EAF6EE;
+    --color-dark:           #163326;
+    --color-text:           #1F2937;
+    --color-muted:          #6B7280;
+    --color-bg:             #FFFFFF;
+    --color-bg-soft:        #F7FAF8;
+    --color-border:         #E5E7EB;
+    --color-whatsapp:       #25D366;
+    --color-whatsapp-hover: #20BA5A;
+    --color-danger:         #E11D48;
+}
