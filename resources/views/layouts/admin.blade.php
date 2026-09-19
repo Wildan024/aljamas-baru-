@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'Dashboard') | Aljamas Admin</title>
+        {{-- Favicon --}}
+    <link rel="icon" type="image/svg+xml" href="{{ asset('images/logo/AljamasFood ikon hijau.svg') }}"> 
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -100,6 +102,16 @@
                             {{ $pendingPartnershipsCount > 9 ? '9+' : $pendingPartnershipsCount }}
                         </span>
                     @endif
+                </a>
+
+                {{-- E-Commerce Partners --}}
+                <a href="{{ route('admin.ecommerce-partners.index') }}"
+                   class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-colors duration-150
+                          {{ request()->routeIs('admin.ecommerce-partners*') ? 'bg-[#238B45] text-white' : 'text-white/70 hover:bg-white/10 hover:text-white' }}">
+                    <svg class="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    </svg>
+                    <span>Partner E-Commerce</span>
                 </a>
 
                 {{-- Settings --}}

@@ -25,8 +25,7 @@
     <meta name="twitter:image" content="@yield('og_image', !empty($settings['company_logo']) ? asset($settings['company_logo']) : asset('images/home/hero_food_production.jpg'))">
 
     {{-- Favicon --}}
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23238B45'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
-
+    <link rel="icon" type="image/svg+xml" href="{{ asset('images/logo/AljamasFood ikon hijau.svg') }}"> 
     {{-- Google Fonts: Poppins & Inter --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

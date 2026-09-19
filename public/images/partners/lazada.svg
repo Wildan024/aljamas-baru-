@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <rect width="48" height="48" rx="12" fill="#0F146D"/>
+  <!-- Lazada heart / box monogram in white and vibrant magenta/orange -->
+  <path fill="#ED1B67" d="M24 37L10.5 23.5a9.5 9.5 0 0113.5-13.4L24 10.2l.1-.1A9.5 9.5 0 0137.5 23.5L24 37z"/>
+  <path fill="#F57224" d="M24 37l6.8-6.8a9.5 9.5 0 000-13.4l-.1-.1-6.7 6.8V37z"/>
+  <path fill="#FFFFFF" d="M24 23.5l-4.5-4.5a3.2 3.2 0 014.5-4.5l.1.1.1-.1a3.2 3.2 0 014.5 4.5L24 23.5z"/>
+</svg>

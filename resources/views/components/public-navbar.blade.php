@@ -10,21 +10,23 @@
         <div class="flex items-center justify-between h-18 sm:h-20">
 
             {{-- Brand Logo & Name --}}
-            <a href="{{ route('home') }}" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-white rounded-xl p-1">
-                <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-[#238B45] font-extrabold text-lg shadow-sm group-hover:bg-[#EAF6EE] transition-colors">
-                    A
-                </div>
-                <div class="flex flex-col">
-                    <span class="font-extrabold text-xl tracking-tight text-white leading-none">
-                        {{ $companyName }}
-                    </span>
-                    @if (!empty($settings['company_tagline']))
-                        <span class="text-[11px] font-medium text-white/80 tracking-normal mt-0.5 hidden sm:inline-block">
-                            Kuliner Berkualitas
+                <a href="{{ url('/') }}" class="flex items-center gap-3">
+                    <img
+                        src="{{ asset('images/logo/AljamasFood ikon putih.svg') }}"
+                        alt="Aljamas Food"
+                        class="w-10 h-12 object-contain"
+                    >
+                    <div class="flex flex-col">
+                        <span class="font-extrabold text-xl tracking-tight text-white leading-none">
+                            {{ $companyName }}
                         </span>
-                    @endif
-                </div>
-            </a>
+                        @if (!empty($settings['company_tagline']))
+                            <span class="text-[11px] font-medium text-white/80 tracking-normal mt-0.5 hidden sm:inline-block">
+                                Produsen Berkualitas
+                            </span>
+                        @endif
+                    </div>
+                </a>
 
             {{-- Desktop Navigation Links (Single-line, clear rhythm) --}}
             <nav class="hidden md:flex items-center gap-1.5 lg:gap-2" aria-label="Menu Utama">

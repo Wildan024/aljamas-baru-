@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\EcommercePartner;
 use App\Models\Gallery;
 use App\Models\Product;
 use Illuminate\View\View;
@@ -35,10 +36,16 @@ class HomeController extends Controller
             ->take(6)
             ->get();
 
+        // 4. Ambil partner e-commerce aktif & terurut
+        $ecommercePartners = EcommercePartner::active()
+            ->ordered()
+            ->get();
+
         return view('home.index', compact(
             'featuredProducts',
             'latestBlogs',
-            'galleries'
+            'galleries',
+            'ecommercePartners'
         ));
     }
 }

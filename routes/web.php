@@ -10,6 +10,7 @@ use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\CompanySettingController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\EcommercePartnerController as AdminEcommercePartnerController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\PartnershipController as AdminPartnershipController;
 use App\Http\Controllers\Admin\ProductController;
@@ -68,7 +69,14 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::resource('partnerships', AdminPartnershipController::class)
         ->only(['index', 'show', 'update', 'destroy']);
 
+    // E-Commerce Partners CRUD
+    Route::patch('ecommerce-partners/{ecommerce_partner}/toggle', [AdminEcommercePartnerController::class, 'toggleStatus'])
+        ->name('ecommerce-partners.toggle');
+    Route::resource('ecommerce-partners', AdminEcommercePartnerController::class)
+        ->except(['show']);
+
     // Company Settings
     Route::get('settings', [CompanySettingController::class, 'index'])->name('settings.index');
     Route::put('settings', [CompanySettingController::class, 'update'])->name('settings.update');
 });
+

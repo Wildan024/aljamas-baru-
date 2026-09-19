@@ -16,7 +16,7 @@
 {{-- ================================================================= --}}
 {{-- 1. HERO SECTION (Asymmetric Split Screen, Taste-First Composition) --}}
 {{-- ================================================================= --}}
-<section class="relative bg-gradient-to-b from-[#F7FAF8] to-white pt-10 pb-16 md:pt-16 md:pb-24 overflow-hidden border-b border-[#E5E7EB]/60">
+<section class="relative bg-gradient-to-b from-[#F7FAF8] to-white pt-10 pb-10 md:pt-16 md:pb-14 overflow-hidden border-b border-[#E5E7EB]/60">
     {{-- Background subtle decorative accents --}}
     <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-[#EAF6EE]/70 blur-3xl pointer-events-none"></div>
     <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-[#EAF6EE]/50 blur-2xl pointer-events-none"></div>
@@ -124,9 +124,14 @@
 </section>
 
 {{-- ================================================================= --}}
-{{-- 2. TENTANG KAMI / COMPANY INTRODUCTION SECTION --}}
+{{-- 2. E-COMMERCE PARTNER SHORTCUT --}}
 {{-- ================================================================= --}}
-<section id="tentang-kami" class="py-16 md:py-24 bg-white border-b border-[#E5E7EB]/60">
+<x-ecommerce-partner-shortcut :partners="$ecommercePartners" />
+
+{{-- ================================================================= --}}
+{{-- 3. TENTANG KAMI / COMPANY INTRODUCTION SECTION --}}
+{{-- ================================================================= --}}
+<section id="tentang-kami" class="pt-10 pb-16 md:pt-14 md:pb-24 bg-white border-b border-[#E5E7EB]/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 

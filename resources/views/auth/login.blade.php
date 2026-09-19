@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Admin | Aljamas</title>
     <meta name="description" content="Halaman login administrator panel Aljamas.">
-
+        {{-- Favicon --}}
+    <link rel="icon" type="image/svg+xml" href="{{ asset('images/logo/AljamasFood ikon hijau.svg') }}"> 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="min-h-screen bg-[#F7FAF8] font-sans flex items-center justify-center px-4">
